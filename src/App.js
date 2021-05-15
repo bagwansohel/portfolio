@@ -7,21 +7,57 @@ import Work from "./component/Work.js"
 import Blog from "./component/Blog.js"
 import Contact from "./component/Contact.js"
 import Footer from "./component/Footer.js"
-
+import { HashLink as Link } from "react-router-hash-link"
+import logo from "./images/logo.svg"
+import { Route, Switch } from "react-router-dom"
 import './style.css';
-import {} from './component/Home.css';
+
 
 export default function App() {
-  return (
+  return <>
+    <header>
+      <div class="container">
+        <nav id="main-nav" class="flex items-center justify-between">
+          <div class="left flex items-center">
+            <div class="branding">
+              <img src={logo} alt="Logo" />
+            </div>
+            <ul>
+              <li><Link smooth to="#Home" className="link">Home</Link></li>
+              <li ><Link smooth to="#About" className="link">About</Link></li>
+              <li ><Link smooth to="#Services" className="link">Services</Link></li>
+              <li ><Link smooth to="#Work" className="link">Work</Link></li>
+              <li ><Link smooth to="#Blog" className="link">Blog</Link></li>
+              <li ><Link smooth to="#Contact" className="link">Contact</Link></li>
+            </ul>
+
+          </div>
+          <div class="right">
+            <button class="btn btn-primary">Contact</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <div>
-    <Home/>
-      <About/>
-      <Services/>
-      <Freelancer/>
-      <Work/>
-      <Blog/>
-      <Contact/>
-      <Footer/>
+      <Home />
+      <About />
+      <Services />
+      <Freelancer />
+      <Work />
+      <Blog />
+      <Contact />
+      <Footer />
+
+      <Switch>
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/Services" component={Services} />
+        <Route exact path="/Freelancer" component={Freelancer} />
+        <Route exact path="/Work" component={Work} />
+        <Route exact path="/Blog" component={Blog} />
+        <Route exact path="/Contact" component={Contact} />
+      </Switch>
     </div>
-  );
+  </>
 }

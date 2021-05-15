@@ -11,7 +11,7 @@
   --secondary:#070606;
 }
 body{
-  font-family:constantia;
+  font-family:"Arial";
   
   margin-right:auto;
 }
@@ -22,30 +22,40 @@ body{
   --webkit-font-smotthing:antialiased;
 }
 
-header{
+header #Home{
       background:var(--dark);
       clip-path: polygon(0 0,100% 0,100% 100%,70% 87%,0 100%);
       
+}
+header{
+	background:var(--dark);
 }
 .container{
   max-width: 1152px;
   padding:0 15px;
   margin:0 auto;
 }
-
-header nav .left a{
+nav{
+	display:inline-block;
+}
+header nav {
+	background:var(--dark);
+	padding: 2rem 0;
+}
+header nav ul{
+	display:inline-block;
+}
+header nav .link{
   color:var(--pure);
   text-decoration:none;
   margin-right:2rem;
   text-transform: uppercase;
   transition:all .3s ease;
 }
-header nav .left a:hover{
+nav .link:hover{
   color:var(--primary);
 }
-header nav {
-  padding: 2rem 0;
-}
+
 header nav .branding{
   margin-right:3rem;
 }
