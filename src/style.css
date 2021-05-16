@@ -1,5 +1,5 @@
 @import 'utilities.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&display=swap');
 
 
 :root{
@@ -11,7 +11,7 @@
   --secondary:#070606;
 }
 body{
-  font-family:"Arial";
+font-family: 'Lato', sans-serif;
   
   margin-right:auto;
 }
@@ -22,7 +22,7 @@ body{
   --webkit-font-smotthing:antialiased;
 }
 
-header #Home{
+#Home{
       background:var(--dark);
       clip-path: polygon(0 0,100% 0,100% 100%,70% 87%,0 100%);
       
@@ -35,14 +35,12 @@ header{
   padding:0 15px;
   margin:0 auto;
 }
-nav{
-	display:inline-block;
-}
+
 header nav {
 	background:var(--dark);
-	padding: 2rem 0;
+	padding: 1.5rem 0;
 }
-header nav ul{
+header nav ul li{
 	display:inline-block;
 }
 header nav .link{
@@ -72,20 +70,20 @@ header nav .branding{
 .hero .right h6{
   font-size:1.6rem;
   color:var(--primary);
-  margin-bottom:0.5rem;
+  margin-bottom:0.7rem;
 }
 .hero .right h1{
   font-size:4rem;
   font-weight:100;
   line-height:1.2;
-  margin-bottom:2rem;
+  margin-bottom:2.2rem;
 }
 .hero .right h1 span{
   color:var(--primary);
 }
 .hero .right p{
   line-height:1.9;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 .hero .right{
@@ -115,8 +113,9 @@ section.about h1 span{
 section.about p{
 	font-family:'Lato' sans-serif;
 	color:var(--ternary);
-	line-height:1.9;
-	margin-bottom:2rem;
+	line-height:1.2;
+	margin-bottom:1rem;
+	margin-top: 1rem;
 }
 section.about .social{
 	display:flex;
@@ -130,8 +129,9 @@ section.about .social a{
 	width:35px;
 	height:35px;
 	border-radius:50%;
-	margin-right:0.6rem;
+	margin-right:0.7rem;
 	transition:all 0.3s ease;
+	margin-left: 0.4rem;
 }
 section.about .social a:hover{
 	background-color:var(--primary);
@@ -167,26 +167,19 @@ section.services .card-wrapper{
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
 	grid-column-gap:2rem;
-	grid-row-gap:6rem;
+	grid-row-gap:2rem;
+	margin-top: 1rem;
 }
 section.services .card-wrapper .card{
 	background:var(--pure);
-	padding:3rem 2rem;
+	padding:3rem 1rem;
 	position:relative;
-	padding-top:5rem;
+	padding-top:2rem;
 	text-align:center;
 	transition:all .3s ease;
 }
 section.services .card-wrapper .card:hover{
-	background-color:var(--dark);
-}
-
-
-section.services .card-wrapper .card img{
-	position:absolute;
-	top:-3.5rem;
-	left:50%;
-	transform:translate(-50%);
+	background-color:var(--primary);
 }
 section.services .card-wrapper .card h2{
 	font-weight:400;
@@ -202,10 +195,11 @@ section.services .card-wrapper .card p{
 
 section.freelancer{
 	text-align:center;
-	/*background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./images/camera.png);*/
+	background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./images/camera.png);
 	color:var(--pure);
 	clip-path:polygon(0 0,100% 0,100% 100%,67% 80%,0 100%);
 	padding-bottom:14rem;
+	
 }
 section.freelancer h1{
 	font-size:2rem;
@@ -215,30 +209,6 @@ section.freelancer p{
 	margin-bottom:2rem;
 	font-family:'Lato' sans-serif;
 }
-section.review .slider .slide img{
-	width:100px;
-	height:100px;
-	border-radius:50%;
-	object-fit:cover;
-	margin-bottom:2rem;
-}
-section.review .slider .slide{
-	text-align:center;
-	display:flex;
-	align-items:center;
-	flex-direction:column;
-	padding:0 10rem;
-}
-section.review .slider .slide p{
-	font-family:'Lato' sans-serif;
-	color:var(--ternary);
-	margin-bottom:1rem;
-}
-section.review .slider .slide span{
-	font-size:0.8rem;
-}
-
-
 section.works{
 	background:var(--light);
 }
@@ -337,8 +307,6 @@ section.blog .card-wrapper .card .card-content p{
 section.blog .card-wrapper .card .card-content .read-more{
 	font-size:0.9rem;
 }
-/* blog section closed */
-
 section.contact .card-wrapper{
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
@@ -348,9 +316,10 @@ section.contact .card-wrapper .card {
 	text-align:center;
 }
 section.contact .card-wrapper .card img{
-	margin-bottom:3rem;
+	margin-bottom:2rem;
+	margin-top: 2rem;
 }
-section.contact .card-wrapper .card h1{
+section.contact .card-wrapper .card h3{
 	font-weight:400;
 	margin-bottom:1rem;
 }
@@ -399,76 +368,18 @@ section.contact .btn-wrapper{
 footer{
 	background:var(--dark);
 	text-align:center;
-	padding:5rem;
+	padding:3rem;
 }
 footer.footer-logo{
-	margin-bottom:3rem;
-	width:150px;
-}
-footer.footer-socials{
-	margin-right:1rem;
 	margin-bottom:2rem;
+	width:300px;
+	
 }
 footer .copyright{
-	color:(--ternary);
+	color:var(--ternary);
+}
+address{
+	color:var(--ternary);
 }
 
-@media (max-width:1024px){
-header #main-nav{
-display:none;
-}	
-}
-.site-main-wrapper{
-position:relative;
-}
-.hamberger{
-	position:absolute;
-	top:40px;
-	right:40px;
-	z-index:11;
-	background:none;
-	border:none;
-	outline:none;
-	cursor:pointer;
-	
-}
-.hamberger img{
-	width:30px;
-}
-.mobile-nav{
-	position:fixed;
-	top:0;
-	left:0;
-	z-index:1001;
-	background:var(--light);
-	width:100%;
-	height:100%;
-	padding:2rem;
-	padding-top:5rem;
-	transform:translateX(-100%);
-}
-.times{
-	position:fixed;
-	top:30px;
-	right:30px;
-	border:none;
-	outline:none;
-	cursor:pointer;
-	background:none;
-}
-.times img{
-	width:30px;
-}
-.mobile-nav ul{
-	list-style-type:none;
-	
-}
-.mobile-nav ul li a{
-	color:var(--secondary);
-	text-decoration:none;
-	font-size:2rem;
-	
-}
-.open{
-	transform:translateX(0);
-}
+

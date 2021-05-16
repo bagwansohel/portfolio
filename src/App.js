@@ -16,10 +16,10 @@ import './style.css';
 export default function App() {
   return <>
     <header>
-      <div class="container">
-        <nav id="main-nav" class="flex items-center justify-between">
-          <div class="left flex items-center">
-            <div class="branding">
+      <div className="container">
+        <nav id="main-nav" className="flex items-center justify-between">
+          <div className="left flex items-center">
+            <div className="branding">
               <img src={logo} alt="Logo" />
             </div>
             <ul>
@@ -28,12 +28,12 @@ export default function App() {
               <li ><Link smooth to="#Services" className="link">Services</Link></li>
               <li ><Link smooth to="#Work" className="link">Work</Link></li>
               <li ><Link smooth to="#Blog" className="link">Blog</Link></li>
-              <li ><Link smooth to="#Contact" className="link">Contact</Link></li>
+
             </ul>
 
           </div>
-          <div class="right">
-            <button class="btn btn-primary">Contact</button>
+          <div className="right">
+            <Link smooth to="#Contact"><button className="btn btn-primary">Contact</button></Link>
           </div>
         </nav>
       </div>

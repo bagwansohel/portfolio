@@ -1,54 +1,111 @@
 import React from 'react';
-import Facebook from "../images/Facebook.png"
+import Gmail from "../images/gmail.png"
+import Phone from "../images/call.png"
+import Map from "../images/map.png"
+import axios from "axios"
+class Contact extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+    
+      name:[],
+      email:[],
+      msg: [],
+      subject:[]
+    
+  };
+    this.Change = this.Change.bind(this);
+    this.Submit = this.Submit.bind(this);
+  }
 
-function Contact() {
-  return (
-    <section className="contact" id="Contact">
+  Change(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  }
+ Submit(event) {
+   event.preventDefault();
+    axios.post(`http://localhost:3000/Contacts`,this.state)
+      .then(res => {
+   
+      alert("Your Response is Submitted...!")
+      })
+      .then(error => {
+        console.log(error)
+      })
+  }
+
+  render() {
+    return <section className="contact" id="Contact">
       <div className="container">
         <h1 className="section-heading">
           Contact <span>Us</span>
         </h1>
-        <p>
-          We provide high standared clean website for your business solution
-        </p>
         <div className="card-wrapper">
           <div className="card">
-          <img src={Facebook} alt="phone icon" />
-            <h1>Call Us On</h1>
+            <img src={Phone} alt="phone icon" />
+            <h3>call us on</h3>
             <h6>7972649002</h6>
           </div>
           <div className="card">
-            <img src={Facebook} alt="mail icon" />
-            <h1>eMAIL</h1>
-            <h6>7972649002</h6>
+            <img src={Gmail} alt="mail icon" />
+            <h3>G-mail</h3>
+            <h6>bagwansohel50@gmail.com</h6>
           </div>
-          <div class="card">
-            <img src={Facebook} alt="map icon" />
-            <h1>visit office</h1>
-            <h6>Address</h6>
+          <div className="card">
+            <img src={Map} alt="map icon" />
+            <h3>visit office</h3>
+            <address>Uttamnagar Pune 411023</address>
           </div>
         </div>
-        <form>
+        <form onSubmit={this.Submit}>
           <div className="input-wrap">
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Your Email" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name"
+              onChange={this.Change}
+              value={this.state.name}
+            />
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter your email"
+              value={this.state.email}
+              onChange={this.Change}
+            />
           </div>
           <div className="input-wrap-2">
-            <input type="text" placeholder="Your Subject ...." />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Enter Your Subject ...."
+              onChange={this.Change}
+              value={this.state.subject}
+            />
             <textarea
-              name=""
+              name="msg"
               id=""
               cols={30}
               rows={10}
-              placeholder="your message"
+              placeholder="Enter Your  message"
+              onChange={this.Change}
+              value={this.state.msg}
             />
           </div>
           <div className="btn-wrapper">
-            <button className="btn btn-primary">Send Message</button>
+            <input
+              type="submit"
+              className="btn btn-primary"
+              value="Send Message"
+            />
           </div>
         </form>
       </div>
     </section>
-  );
+
+  }
 }
 export default Contact;

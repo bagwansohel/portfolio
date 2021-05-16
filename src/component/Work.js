@@ -1,6 +1,8 @@
 import React from 'react';
-import Ph from "../images/ph-1.png"
-
+import Fruits from "../images/fruits.jpg"
+import Phishing from "../images/phishing.jpg"
+import Portfolio from "../images/portfolio.jpg"
+import Report from "../Resume/Report.pdf"
 function Work() {
   return (
     <section className="works" id="Work">
@@ -13,46 +15,26 @@ function Work() {
           <div className="card">
             <div className="overlay">
               <span>Category</span>
-              <a href=" ">Web Development</a>
+              <a href={Report}>Phishing Attack Project</a>
             </div>
-            <img src={Ph} alt="" />
+            <img src={Phishing} alt="Phishing" />
           </div>
           <div className="card">
             <div className="overlay">
               <span>Category</span>
-              <a href=" ">Web Development</a>
+              <a href="https://github.com/bagwansohel/fruits-vegitables.git">Fruits&Vegitables Project</a>
             </div>
-            <img src={Ph} alt="" />
+            <img src={Fruits} alt="Fruits" />
           </div>
           <div className="card">
             <div className="overlay">
               <span>Category</span>
-              <a href=" ">Web Development</a>
+              <a href="https://github.com/bagwansohel/portfolio.git">Protfolio Project</a>
             </div>
-            <img src={Ph} alt="" />
-          </div>
-          <div className="card">
-            <div class="overlay">
-              <span>Category</span>
-              <a href=" ">Web Development</a>
-            </div>
-            <img src={Ph} alt="" />
-          </div>
-          <div className="card">
-            <div className="overlay">
-              <span>Category</span>
-              <a href=" ">Web Development</a>
-            </div>
-            <img src={Ph} alt="" />
-          </div>
-          <div className="card">
-            <div className="overlay">
-              <span>Category</span>
-              <a href=" ">Web Development</a>
-            </div>
-            <img src={Ph} alt="" />
+            <img src={Portfolio} alt="Portfolio" />
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -38,13 +38,13 @@ function Blog() {
               </a>
               <span>may 12 2017</span>
               <p>Descriptiomhv fgdr grt radth h1yh th</p>
-              <a href=" " class="read-more">
+              <a href=" " className="read-more">
                 Read More
               </a>
             </div>
           </div>
           <div className="card">
-            <div class="img-wrapper">
+            <div className="img-wrapper">
               <img src={Artical} alt="" />
             </div>
             <div className="card-content">
