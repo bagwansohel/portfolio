@@ -7,7 +7,7 @@ function Services() {
         <h1 className="section-heading">
           <span>Our</span>Services
         </h1>
-        <p>We provide desktop aplication,web applications and products that represent your brand..</p>
+        <p>We provide desktop application,web applications and products that represent your brand..</p>
         <div className="card-wrapper">
           <div className="card">
             <h2>Web Developement</h2>
